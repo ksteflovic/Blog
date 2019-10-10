@@ -19,6 +19,7 @@ class TestController extends Controller
             echo "Cislo: " . $i . "<br>";
         }
         return true;
+
     }
     public function test3()
     {
