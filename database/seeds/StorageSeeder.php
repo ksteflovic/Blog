@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Database\Seeder;
 
-class StorageSeeder
+class StorageSeeder extends Seeder
 {
     public function run()
     {
