@@ -6,7 +6,7 @@ class StorageSeeder extends Seeder
 {
     public function run()
     {
-        DB::table()->insert([
+        DB::table('storage')->insert([
             'storage_type' => "Test",
             'storage_name'=> "Testovy",
         ]);
