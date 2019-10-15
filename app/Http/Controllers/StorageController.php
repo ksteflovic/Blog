@@ -17,8 +17,16 @@ class StorageController extends Controller
 
     public function delete($id){
         $storage = Storage::find($id);
-        $storage = $this->delete();
-        echo "Deleted successful.";
+        if($storage==null)
+        {
+            echo "No id found.";
+        }
+        else
+        {
+            $storage -> delete();
+            echo "Deleted successful.";
+        }
+
     }
 
     public function update($id){
