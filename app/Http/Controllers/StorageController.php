@@ -7,11 +7,30 @@ use App\Models\Storage;
 
 class StorageController extends Controller
 {
-    public function test(){
+    public function insert(){
         $newStorage = new Storage();
         $newStorage -> storage_type = str_random();
         $newStorage -> storage_name = str_random();
         $newStorage -> save();
         var_dump($newStorage);
+    }
+
+    public function delete($id){
+        $storage = Storage::find($id);
+        $storage = $this->delete();
+        echo "Deleted successful.";
+    }
+
+    public function update($id){
+        $storage = Storage::find($id);
+        $storage -> storage_name ="LOL".str_random();
+        $storage -> save();
+        echo "Updated successful.";
+    }
+
+    public function show($id){
+        $storage = Storage::find($id);
+        echo $storage->storage_type . "<br>";
+        echo $storage->storage_name . "<br>";
     }
 }
