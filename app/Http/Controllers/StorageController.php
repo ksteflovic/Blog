@@ -37,8 +37,13 @@ class StorageController extends Controller
     }
 
     public function show($id){
-        $storage = Storage::find($id);
-        echo $storage->storage_type . "<br>";
-        echo $storage->storage_name . "<br>";
+        if($id===null){
+            echo "Nothing there.";
+        }
+        else {
+            $storage = Storage::find($id);
+            echo $storage->storage_type . "<br>";
+            echo $storage->storage_name . "<br>";
+        }
     }
 }
