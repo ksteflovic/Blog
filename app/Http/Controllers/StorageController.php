@@ -7,41 +7,45 @@ use App\Models\Storage;
 
 class StorageController extends Controller
 {
-    public function insert(){
+    public function insert()
+    {
         $newStorage = new Storage();
-        $newStorage -> storage_type = str_random();
-        $newStorage -> storage_name = str_random();
-        $newStorage -> save();
+        $newStorage->storage_type = str_random();
+        $newStorage->storage_name = str_random();
+        $newStorage->save();
         var_dump($newStorage);
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $storage = Storage::find($id);
-        if($storage==null)
-        {
+        if ($storage == null) {
             echo "No id found.";
-        }
-        else
-        {
-            $storage -> delete();
+        } else {
+            $storage->delete();
             echo "Deleted successful.";
         }
 
     }
 
-    public function update($id){
+    public function update($id)
+    {
         $storage = Storage::find($id);
-        $storage -> storage_name ="LOL".str_random();
-        $storage -> save();
-        echo "Updated successful.";
+        if ($storage == null) {
+            echo "Nothing to update.";
+        } else {
+            $storage->storage_name = "LOL" . str_random();
+            $storage->save();
+            echo "Updated successful.";
+        }
     }
 
-    public function show($id){
-        if($id===null){
+    public function show($id)
+    {
+        $storage = Storage::find($id);
+        if ($storage == null) {
             echo "Nothing there.";
-        }
-        else {
-            $storage = Storage::find($id);
+        } else {
             echo $storage->storage_type . "<br>";
             echo $storage->storage_name . "<br>";
         }
