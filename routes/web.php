@@ -23,4 +23,4 @@ Route::get('/up/{id}', 'StorageController@update');
 Route::get('/show/{id}', 'StorageController@show');
 */
 Route::get('/adduser', 'UserController@getAddUserForm');
-Route::get('/insert', ['as' => 'insert','uses' => 'UserController@insertAction']);
+Route::post('/insert', ['as' => 'insert','uses' => 'UserController@insertAction']);
