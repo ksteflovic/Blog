@@ -3,12 +3,11 @@
 
 namespace App\Http\Controllers;
 
-
-use App\Models\Storage;
+use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
-
     public function getAddUserForm()
     {
         return view("adduser");
@@ -22,10 +21,10 @@ class UserController extends Controller
         $birthday = $request->input('birthday');
 
         $user = new User();
-        $user->meno = $firstname;
-        $user->priezvisko = $lastname;
+        $user->firstname = $firstname;
+        $user->lastname = $lastname;
         $user->email = $email;
-        $user->narodeniny = $birthday;
+        $user->birthday = $birthday;
         $user->save();
 
         return response()->view('adduser');
