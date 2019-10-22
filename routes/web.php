@@ -19,5 +19,7 @@ Route::get('/', function () {
 
 Route::get('/insert', 'StorageController@insert');
 Route::get('/delete/{id}', 'StorageController@delete');
-Route::get('/update/{id}', 'StorageController@update');
+Route::get('/up/{id}', 'StorageController@update');
 Route::get('/show/{id}', 'StorageController@show');
+
+Route::get('/insert', ['as' => 'insert','uses' => 'UserController@insertAction']);
