@@ -13,7 +13,8 @@ class StorageController extends Controller
         $newStorage->storage_type = str_random();
         $newStorage->storage_name = str_random();
         $newStorage->save();
-        var_dump($newStorage);
+       // var_dump($newStorage);
+        echo "Nové dáta boli úspešne vložené.";
     }
 
     public function delete($id)
@@ -23,7 +24,7 @@ class StorageController extends Controller
             echo "No id found.";
         } else {
             $storage->delete();
-            echo "Deleted successful.";
+            echo "Delete successful.";
         }
 
     }
@@ -46,8 +47,8 @@ class StorageController extends Controller
         if ($storage == null) {
             echo "Nothing there.";
         } else {
-            echo $storage->storage_type . "<br>";
-            echo $storage->storage_name . "<br>";
+            echo "Storage type: ".$storage->storage_type . "<br>";
+            echo "Storage name: ".$storage->storage_name . "<br>";
         }
     }
 }
