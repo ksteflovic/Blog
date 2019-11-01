@@ -1795,7 +1795,7 @@
             // months but not day for some odd reason.
             date_string = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
         } else {
-            date_string = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+            date_string = date.getDay() + '.' + (date.getMonth() + 1) + '.' + date.getYear();
         }
 
         return options.string ? date_string : date;

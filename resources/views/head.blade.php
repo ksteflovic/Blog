@@ -9,7 +9,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emoji-toolkit@5.0.5/lib/js/joypixels.min.js"></script>
+    <script src="../resources/assets/js/chance.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-toolkit@5.0.5/extras/css/joypixels.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{{url("../resources/assets/css/style.css")}}" />
     <link rel="stylesheet" type="text/css" href="{{url("../resources/assets/css/style.css")}}" />
 </head>
 <body>
