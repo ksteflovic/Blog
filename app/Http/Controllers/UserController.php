@@ -37,18 +37,18 @@ class UserController extends Controller
 
     public function insert_page()
     {
-        return view("/insert");
+        return view("/crud_operations/insert");
     }
     public function edit_page()
     {
-        return view("/insert");
+        return view("/crud_operations/edit");
     }
     public function delete_page()
     {
-        return view("/insert");
+        return view("/crud_operations/delete");
     }
     public function showAll_page()
     {
-        return view("/insert");
+        return view("/crud_operations/showAll");
     }
 }
