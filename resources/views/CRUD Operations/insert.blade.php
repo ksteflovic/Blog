@@ -1,5 +1,5 @@
-@include('head');
-@include('navigate');
+@include('head')
+@include('navigate')
 <div id="parent">
     <form method="post" action="{{ action('UserController@insertAction') }}" id="form_login">
         <br>
@@ -34,4 +34,4 @@
         $('#insert').addClass('active');
     });
 </script>
-@include('foot');
+@include('foot')

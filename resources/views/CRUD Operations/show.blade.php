@@ -1,5 +1,5 @@
-@include('head');
-@include('navigate');
+@include('head')
+@include('navigate')
 
 <!-- code -->
 
@@ -9,4 +9,4 @@
         $('#show').addClass('active');
     });
 </script>
-@include('foot');
+@include('foot')

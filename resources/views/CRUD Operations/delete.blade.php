@@ -1,5 +1,5 @@
-@include('head');
-@include('navigate');
+@include('head')
+@include('navigate')
 
 <!-- code -->
 
