@@ -1,6 +1,7 @@
 @include('head')
 @include('navigate')
-<div id="container">
+<div id="parent">
+    <h3>Formulár pre zadávavanie vstupných hodnôt</h3>
     <form method="post" action="{{ action('UserController@insertAction') }}" >
         <br>
         <div class="input-group">
@@ -24,7 +25,7 @@
         <input type="date" name="birthday" class="form-control" value="1986-05-11" min="1950-01-01" max="2019-12-31">
         <br><br>
         <div style="text-align: center">
-            <input type="submit" value="Odoslať" class="btn btn-primary">
+            <input type="submit" value="Odoslať" class="btn btn-primary"> <input type="button" value="Generovať" class="btn btn-secondary">
         </div>
     </form>
 </div>
