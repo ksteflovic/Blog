@@ -8,7 +8,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function getAddUserForm()
+    public function home_page()
     {
         return view("/layout/home");
     }
@@ -33,5 +33,22 @@ class UserController extends Controller
     public function showAllAction(){
         $users = User::all();
         return view("users", ['users'=>$users]);
+    }
+
+    public function insert_page()
+    {
+        return view("/insert");
+    }
+    public function edit_page()
+    {
+        return view("/insert");
+    }
+    public function delete_page()
+    {
+        return view("/insert");
+    }
+    public function showAll_page()
+    {
+        return view("/insert");
     }
 }
