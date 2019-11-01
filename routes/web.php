@@ -24,12 +24,12 @@ Route::get('/show/{id}', 'StorageController@show');
 */
 
 
-Route::get('/home', 'UserController@home_page');
+Route::get('/home', ['as' => 'home', 'uses' => 'UserController@home_page']);
 Route::get('/insert', ['as' => 'insert', 'uses' => 'UserController@insert_page']);
 Route::post('/insertAction', ['as' => 'insertAction','uses' => 'UserController@insertAction']);
-Route::post('/edit', ['as' => 'edit','uses' => 'UserController@edit_page']);
+Route::get('/edit', ['as' => 'edit','uses' => 'UserController@edit_page']);
 Route::post('/editAction', ['as' => 'editAction','uses' => 'UserController@editAction']);
-Route::post('/delete', ['as' => 'delete','uses' => 'UserController@delete_page']);
+Route::get('/delete', ['as' => 'delete','uses' => 'UserController@delete_page']);
 Route::post('/deleteAction', ['as' => 'deleteAction','uses' => 'UserController@deleteAction']);
-Route::post('/show', ['as' => 'show','uses' => 'UserController@showAll_page']);
+Route::get('/show', ['as' => 'show','uses' => 'UserController@showAll_page']);
 

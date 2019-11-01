@@ -49,6 +49,6 @@ class UserController extends Controller
     }
     public function showAll_page()
     {
-        return view("/crud_operations/showAll");
+        return view("/crud_operations/show");
     }
 }

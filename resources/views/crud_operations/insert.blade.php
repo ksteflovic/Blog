@@ -1,7 +1,7 @@
 @include('head')
 @include('navigate')
-<div id="parent">
-    <form method="post" action="{{ action('UserController@insertAction') }}" id="form_login">
+<div id="container">
+    <form method="post" action="{{ action('UserController@insertAction') }}" >
         <br>
         <div class="input-group">
             <div class="input-group-prepend">
