@@ -16,13 +16,14 @@ Route::get('/', function () {
 });
 //Route::get('/test1', 'TestController@test1');
 
-
+/*
 Route::get('/insert', 'StorageController@insert');
 Route::get('/delete/{id}', 'StorageController@delete');
 Route::get('/up/{id}', 'StorageController@update');
 Route::get('/show/{id}', 'StorageController@show');
+*/
 
-/*
+
 Route::get('/adduser', 'UserController@getAddUserForm');
 Route::post('/insert', ['as' => 'insert','uses' => 'UserController@insertAction']);
-*/
+
