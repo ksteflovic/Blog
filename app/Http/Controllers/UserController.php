@@ -31,8 +31,7 @@ class UserController extends Controller
     }
 
     public function showAllAction(){
-        $users = User::all();
-        return view("users", ['users'=>$users]);
+
     }
 
     public function insert_page()
@@ -49,6 +48,7 @@ class UserController extends Controller
     }
     public function showAll_page()
     {
-        return view("/crud_operations/show");
+        $users = User::all();
+        return view("/crud_operations/show", ['users'=>$users]);
     }
 }

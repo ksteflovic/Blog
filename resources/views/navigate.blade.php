@@ -12,14 +12,15 @@
                 <a class="nav-link" href="{{URL::route('insert')}}" id="insert">Pridať</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{URL::route('edit')}}" id="edit">Upraviť</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{URL::route('delete')}}" id="delete">Vymazať</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="{{URL::route('show')}}" id="show">Prezerať</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="edit" >Upraviť</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="delete">Vymazať</a>
+            </li>
+
         </ul>
     </div>
 </nav>
