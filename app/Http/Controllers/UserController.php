@@ -27,7 +27,7 @@ class UserController extends Controller
         $user->birthday = $birthday;
         $user->save();
 
-        return response()->view('adduser');
+        return redirect()->back()->with('message', 'IT WORKS!');
     }
 
     public function showAllAction(){
