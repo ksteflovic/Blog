@@ -30,22 +30,27 @@ class UserController extends Controller
         return redirect()->back()->with('message', 'IT WORKS!');
     }
 
-    public function editAction(){
+    public function editAction($id, Request $request){
 
-        return redirect()->back()->with('message', 'Dáta boli <strong>úspešne</strong> aktualizované!');
-    }
+        $user = User::where("id", "=", $id)->first();
+        $user->update(['firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'email' => $request->input('email'),
+            'birthday' => $request->input('birthday')]);
 
-    public function showAllAction(){
+        $msg = 'Dáta boli <strong>úspešne</strong> aktualizované!';
 
+        return redirect()->action('UserController@showAll_page')->with('message', $msg);
     }
 
     public function insert_page()
     {
         return view("/crud_operations/insert");
     }
-    public function edit_page()
+    public function edit_page($id)
     {
-        return view("/crud_operations/edit");
+        $user = User::find($id);
+        return view("/crud_operations/edit",  ['user'=>$user]);
     }
     public function delete_page()
     {
