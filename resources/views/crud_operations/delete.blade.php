@@ -1,19 +1,21 @@
 @include('head')
 @include('navigate')
 
-<div class="jumbotron">
-    <h1 class="display-4">Vymazanie údajov z tabuľky</h1>
-    <br>
-    <p class="lead">Určite chcete vymazať nasledujúce údaje z tabuľky?</p>
-    <p><strong>Meno: </strong></p>
-    <p><strong>Priezvisko: </strong></p>
-    <p><strong>Email: </strong></p>
-    <p><strong>Dátum narodenia: </strong></p>
-    <hr class="my-4">
-    <p>Táto akcia je nevratná!</p>
-    <p class="lead">
-        <a class="btn btn-danger btn-bg" role="button">Áno, vymazať</a>
-    </p>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4" style="color: darkred;"><strong>Vymazanie údajov z tabuľky</strong></h1>
+        <br>
+        <p class="lead">Určite chcete vymazať nasledujúce údaje z tabuľky?</p>
+        <p><strong>Meno: </strong>{{ $user->firstname }}</p>
+        <p><strong>Priezvisko: </strong>{{ $user->lastname }}</p>
+        <p><strong>Email: </strong>{{ $user->email }}</p>
+        <p><strong>Dátum narodenia: </strong>{{ $user->birthday }}</p>
+        <hr class="my-4">
+        <p>Táto akcia je nevratná!</p>
+        <p class="lead">
+            <a class="btn btn-danger btn-bg" role="button" href="{{ action("UserController@deleteAction", ['id' => $user->id]) }}">Áno, vymazať</a>
+        </p>
+    </div>
 </div>
 
 <script>

@@ -43,6 +43,14 @@ class UserController extends Controller
         return redirect()->action('UserController@showAll_page')->with('message', $msg);
     }
 
+    public function deleteAction($id){
+
+        User::where('id', '=', $id)->delete();
+
+        $msg = 'Údaj bol <strong>úspešne</strong> vymazaný!';
+        return redirect()->action('UserController@showAll_page')->with('message', $msg);
+    }
+
     public function insert_page()
     {
         return view("/crud_operations/insert");
@@ -52,9 +60,10 @@ class UserController extends Controller
         $user = User::find($id);
         return view("/crud_operations/edit",  ['user'=>$user]);
     }
-    public function delete_page()
+    public function delete_page($id)
     {
-        return view("/crud_operations/delete");
+        $user = User::find($id);
+        return view("/crud_operations/delete",  ['user'=>$user]);
     }
     public function showAll_page()
     {

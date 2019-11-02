@@ -22,9 +22,18 @@
         <li>Pridaný náhodný generátor údajov</li>
         <li>Responzívny dizajn</li>
     </ul>
+    <em>Dúfam, že sa vám moja výsledná práca bude páčiť.</em> 😊
+    <br><br>
+    <a href="https://github.com/just-pie/Blog"><img
+                src="../resources/assets/svg/github-logo.svg"
+                alt="Logo of Github"
+                width="50px" /></a>
+    <a href="https://laravel.com/"><img
+                src="../resources/assets/svg/laravel.svg"
+                alt="Logo of Laravel"
+                width="50px" style="margin-left: 10px;"/></a>
 
-    <p>Dúfam, že sa vám moja výsledná práca bude páčiť.</p>
-    <em>Tip: Nabudúce Vás chcem poprosiť, aby ste si pri zadávaní úloh po sebe kontrolovali gramatiku. Ďakujem </em>😊
+
 
 
 </div>

@@ -18,7 +18,7 @@
             <th scope="col" style="color:white;">ID</th>
             <th scope="col" style="color:white;">Meno a priezvisko</th>
             <th scope="col" style="color:white;">E-mail</th>
-            <th scope="col" style="color:white;">Dátum narodenia</th>
+            <th scope="col" style="color:white;">Dátum narodenia (rok-mesiac-deň)</th>
             <th scope="col" style="color:white;">Akcia</th>
         </tr>
         </thead>

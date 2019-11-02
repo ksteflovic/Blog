@@ -29,7 +29,7 @@ Route::get('/insert', ['as' => 'insert', 'uses' => 'UserController@insert_page']
 Route::post('/insertAction', ['as' => 'insertAction','uses' => 'UserController@insertAction']);
 Route::get('/edit/{id}', ['as' => 'edit','uses' => 'UserController@edit_page']);
 Route::post('/editAction/{id}', ['as' => 'editAction','uses' => 'UserController@editAction']);
-Route::get('/delete', ['as' => 'delete','uses' => 'UserController@delete_page']);
-Route::post('/deleteAction', ['as' => 'deleteAction','uses' => 'UserController@deleteAction']);
+Route::get('/delete/{id}', ['as' => 'delete','uses' => 'UserController@delete_page']);
+Route::get('/deleteAction/{id}', ['as' => 'deleteAction','uses' => 'UserController@deleteAction']);
 Route::get('/show', ['as' => 'show','uses' => 'UserController@showAll_page']);
 
