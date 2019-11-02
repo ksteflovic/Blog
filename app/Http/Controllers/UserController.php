@@ -30,6 +30,11 @@ class UserController extends Controller
         return redirect()->back()->with('message', 'IT WORKS!');
     }
 
+    public function editAction(){
+
+        return redirect()->back()->with('message', 'Dáta boli <strong>úspešne</strong> aktualizované!');
+    }
+
     public function showAllAction(){
 
     }

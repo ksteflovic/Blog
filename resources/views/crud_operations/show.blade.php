@@ -3,6 +3,15 @@
 
 <div id="parent">
 
+    @if(session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session()->get('message') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+
     <table class="table table-striped table-dark">
         <thead>
         <tr class="bg-primary">
@@ -24,7 +33,7 @@
                     <div class="btn-toolbar" role="toolbar" aria-label="Button action group">
                         <div class="btn-group mr-2" role="group" aria-label="Action group">
                             <a href="{{ action("UserController@edit_page", ['id' => $user->id]) }}"
-                               class="btn btn-outline-warning" role="button">Editovať</a>
+                               class="btn btn-outline-warning" role="button">Upraviť</a>
                             <a href="{{ action("UserController@delete_page", ['id' => $user->id]) }}"
                                class="btn btn-outline-danger" role="button">Vymazať</a>
                         </div>

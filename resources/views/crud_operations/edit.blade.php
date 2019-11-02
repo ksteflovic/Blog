@@ -2,17 +2,8 @@
 @include('navigate')
 
 <div id="parent">
-    <h3>Formulár pre zadávavanie vstupných hodnôt</h3>
+    <h3>Formulár pre úpravu existujúcich hodnôt</h3>
     <br>
-    @if(session()->has('message'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            Dáta boli <strong>úspešne</strong> aktualizované!
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
-
     <form method="post" action="{{ action('UserController@editAction') }}" >
         <br>
 
